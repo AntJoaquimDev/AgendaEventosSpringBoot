@@ -1,4 +1,4 @@
-package com.eventoSpring;
+package com.eventoSpring.data;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -24,8 +24,8 @@ public class DataConfigurationPostgreSQL{
 
         BasicDataSource basicDataSource = new BasicDataSource();
         basicDataSource.setUrl(dbUrl);
-        basicDataSource.setUsername("eventoapp");
-        basicDataSource.setPassword("admin");
+        basicDataSource.setUsername(username);
+        basicDataSource.setPassword(password);
 
         return basicDataSource;
     }

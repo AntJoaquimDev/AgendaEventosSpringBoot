@@ -36,26 +36,23 @@
 			</tr>
 		</thead>
 		<tbody>
-	<tr th:each="evento : ${eventos}">		
-			<td><a th:href="${(#mvc.url('EC#detalhesEvento').arg(0, evento.codigo)).build()}"><span th:text="${evento.nome}"></span></a></td>
-			<td><span th:text="${evento.local}"></span></td>
-			<td><span th:text="${evento.data}"></span></td>
-			<td><span th:text="${evento.horario}"></span></td>
-			
-			<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarEvento').arg(0, evento.codigo)).build()}">
-			<span th:text="${evento.nome}"></span></a><i class="material-icons left">delete</i></td>
-	
-		</tr>
+			<tr th:each="evento : ${eventos}">
+				<td><a th:href="${(#mvc.url('EC#detalhesEvento').arg(0, evento.codigo)).build()}"><span th:text="${evento.nome}"></span></a></td>
+				<td><span th:text="${evento.local}"></span></td>
+				<td><span th:text="${evento.data}"></span></td>
+				<td><span th:text="${evento.horario}"></span></td>
+				<td><a class="waves-effect waves-light btn-small" th:href="${(#mvc.url('EC#deletarEvento').arg(0, evento.codigo)).build()}"><i class="material-icons left">delete</i></a></td>
+			</tr>
 		</tbody>
 	
 	</table>
-
-
 
 	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script type="text/javascript" src="materialize/js/materialize.min.js"></script>
 
 </body>
 
+
+</html>
 
 </html>
